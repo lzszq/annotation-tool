@@ -3,28 +3,79 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta name="referrer" content="never">
 
-    <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
+    
     <script src="./lib/js/jquery.min.js"></script>
     <script src="./lib/js/bootstrap.min.js"></script>
+    <script src="./lib/js/video.js"></script>
+
+    <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
     <link href="./lib/css/style.css" rel="stylesheet">
+    <link href="./lib/css/tag.css" rel="stylesheet">
+    <link href="./lib/css/video-js.css" rel="stylesheet">
 
     <title>标注工具</title>
 </head>
 
 <body>
-    <div class="modal fade" id="imageTag" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        &times;
-                    </button>
-                    <iframe id="openUrl" width="100%;" height="100%"></iframe>
+
+    <div id="imageTag" style="height: 100%;">
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="src" aria-hidden="true">
+            <div class="modal-dialog modal-lg" style="width: 1200px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a href="./annotation_tool.html" style="margin-right: 5px;color: #000; text-decoration: none;">
+                            <img src="./lib/img/left.png" height="15px;" style="position: relative;top: -1px;" />返回</a>
+                    </div>
+                    <div class="modal-body">
+                        <div class="main">
+                            <div class="modelLeft">
+                                <div id="mp4Loaded"><img src="./lib/img/loading.gif"></div>
+                                <div style="width:848px;height:488px">
+                                    <video id="player"
+                                        class="video-js vjs-big-play-centered vjs-default-skin vjs-fluid"></video>
+                                </div>
+                                <div class="progress" id="progress" data-container="body" data-toggle="popover">
+                                    <div class="progress-bar" id="progressbar" role="progressbar" aria-valuemin="0"
+                                        aria-valuemax="100" style="width: 0%;">
+                                    </div>
+                                </div>
+
+                                <div class="my-progress" id="myProgress" style="display: none">
+                                </div>
+                                <div style="margin-left: 12px;">
+                                    <span id="current">0</span>
+                                    <span id="duration"></span> (s)
+                                </div>
+                            </div>
+                            <div class="modelRight">
+                                <div class="modelTodo">
+                                    <button class="delTagBtn btn btn-danger" onclick="delTag(this)">清除</button>
+                                    <button class="btn btn-success" onclick="saveTimeInfo(true)">保存</button>
+                                    <button class="btn btn-danger" onclick="delVideo(true)">删除</button>
+                                </div>
+
+                                <div class="info">
+                                    <h4>标签</h4>
+                                    <div class="radioBox">
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <h4>标注</h4>
+                                    <div class="result">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
+
     <div class="container">
         <div id="tip"></div>
         <div class="header">
@@ -43,13 +94,7 @@
                         <input type="file" name="tags" class="file form-control" id="tags" size="28"
                             onchange="changeFile(this, 'tagFile')" />
                     </div>
-                    <span>&nbsp;-&nbsp;</span>
-                    <div class="form-group">
-                        <input type='text' name='File' id='frameFile' disabled class='form-control'
-                            placeholder="导入图片文件" />
-                        <input type="file" name="frames" class="file form-control" id="tags" size="28"
-                            onchange="changeFile(this, 'frameFile')" />
-                    </div>
+
                     <button type="button" onclick="handleImport()" class="btn btn-primary">导入</button>
                 </div>
             </form>
@@ -98,8 +143,11 @@
         </div>
     </div>
 </body>
+<!-- <script>document.querySelector("#imageTag").style.display = "none";</script> -->
+<script>$("#imageTag").hide()</script>
 
 <script src="./lib/js/config.js"></script>
 <script src="./lib/js/index.js"></script>
+<script src="./lib/js/imageTag.js"></script>
 
 </html>
