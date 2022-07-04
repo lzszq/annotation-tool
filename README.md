@@ -17,7 +17,13 @@
 
 ## 使用环境
 
-推荐使用docker-compose部署一个nginx容器，用于播放视频
+推荐使用 docker-compose 部署一个 nginx 容器，用于播放视频 (good choice)
+
+```docker-compose up -d```
+
+或者使用 python 自带的 http.server (bad choice)
+
+```python3 -m http.server```
 
 ## 操作
 
