@@ -1,5 +1,7 @@
 # 标注工具操作文档
 
+支持本地标注，无需使用youtube
+
 基于 [annotation-tool](https://github.com/coin-dataset/annotation-tool)
 
 ## 文件结构
