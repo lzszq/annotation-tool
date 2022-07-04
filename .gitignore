@@ -1,3 +1,4 @@
-input/frame.txt
 input/label.txt
 input/video.txt
+
+nginx/docker-compose.yml
