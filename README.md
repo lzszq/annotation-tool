@@ -17,7 +17,9 @@
 
 ## 使用环境
 
-推荐使用 docker-compose 部署一个 nginx 容器，用于播放视频 (good choice)
+本地使用，将本地对应文件路径写入 video.txt 中
+
+推荐使用 docker-compose 部署一个 nginx 容器，方遍访问服务器远程数据(good choice)
 
 ```docker-compose up -d```
 
