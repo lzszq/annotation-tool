@@ -3,4 +3,4 @@ input/video.txt
 
 nginx/docker-compose.yml
 
-video
+video/*
