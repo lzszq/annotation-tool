@@ -17,7 +17,9 @@
 
 ## 使用环境
 
-本地使用，将本地对应文件路径写入 video.txt 中
+使用 make_file.py 将 url 写入文件中
+
+本地使用，将本地对应文件路径写入 video.txt 中(注意，应使用相对路径)
 
 推荐使用 docker-compose 部署一个 nginx 容器，方遍访问服务器远程数据(good choice)
 
