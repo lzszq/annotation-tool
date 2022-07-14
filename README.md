@@ -11,6 +11,7 @@
 ├── input 标注所需文件（可参考示例文件进行自定义）
 ├──── label.txt (tagId,tag)
 ├──── video.txt (urlId,url)
+├──── instruction-*.txt (URLID,URL,TagID,Tag,Start,End,Time,State)
 ├── lib 源码
 └── annotation_tool.html  软件入口
 ```
@@ -117,3 +118,9 @@ tagId,tag
 ### 四、导出标注文件
 
 点击 `下载` 可导出文件（导出文件可作为导入文件进行标注检查）
+
+### 五、导入未标注完的历史文件
+
+参考 [Video Labeling](https://github.com/425776024/VideoLabeling)
+
+导入历史文件

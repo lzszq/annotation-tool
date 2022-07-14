@@ -6,7 +6,7 @@
     <meta http-equiv="Access-Control-Allow-Origin" content="*" />
     <meta name="referrer" content="never">
 
-    
+
     <script src="./lib/js/jquery.min.js"></script>
     <script src="./lib/js/bootstrap.min.js"></script>
     <script src="./lib/js/video.js"></script>
@@ -93,6 +93,13 @@
                             placeholder="导入标签文件" />
                         <input type="file" name="tags" class="file form-control" id="tags" size="28"
                             onchange="changeFile(this, 'tagFile')" />
+                    </div>
+                    <span>&nbsp;-&nbsp;</span>
+                    <div class="form-group">
+                        <input type='text' name='File' id='historyFile' disabled class='form-control'
+                            placeholder="导入历史文件(可选项)" />
+                        <input type="file" name="historys" class="file form-control" id="historys" size="28"
+                            onchange="changeFile(this, 'historyFile')" />
                     </div>
 
                     <button type="button" onclick="handleImport()" class="btn btn-primary">导入</button>
