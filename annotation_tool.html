@@ -23,7 +23,7 @@
 
     <div id="imageTag" style="width: 100%;">
         <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="src" aria-hidden="true">
-            <div class="modal-dialog modal-lg" style="width: 1200px;">
+            <div class="modal-dialog modal-lg" style="width: 1205px;">
                 <div class="modal-content">
                     <div class="modal-header">
                         <a href="./annotation_tool.html" style="margin-right: 5px;color: #000; text-decoration: none;">
@@ -51,22 +51,26 @@
                                 </div>
                             </div>
                             <div class="modelRight">
-                                <div class="modelTodo">
-                                    <button class="delTagBtn btn btn-danger" onclick="delTag(this)">清除</button>
-                                    <button class="btn btn-success" onclick="saveTimeInfo(true)">保存</button>
-                                    <button class="btn btn-danger" onclick="delVideo(true)">删除</button>
-                                </div>
-
-                                <div class="info">
-                                    <h4>标签</h4>
-                                    <div class="radioBox">
+                                <div class="modelRightTop">
+                                    <div class="modelTodo">
+                                        <button class="delTagBtn btn btn-danger" onclick="delTag(this)">清除</button>
+                                        <button class="btn btn-success" onclick="saveTimeInfo(true)">保存</button>
+                                        <button class="btn btn-danger" onclick="delVideo(true)">删除</button>
+                                    </div>
+                                    <div class="info">
+                                        <h4>标签</h4>
+                                        <div class="radioBox">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="info">
-                                    <h4>标注</h4>
-                                    <div class="result">
+                                <div class="modelRightBottom">
+                                    <div class="info">
+                                        <h4>标注</h4>
+                                        <div class="result">
+                                        </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>

@@ -140,7 +140,7 @@ html, body{
   flex-direction: column;
 }
 .info {
-  width: 300px;
+  width: 270px;
   padding: 20px;
   background: #fff;
 }
@@ -261,7 +261,23 @@ label {
   position: relative;
   display: flex;
   flex-direction: column;
+}
+.modelRight .modelRightTop {
+  height: 55%;
+  width:100%;
+  overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   padding-top: 10px;
+}
+.modelRight .modelRightBottom {
+  height: 45%;
+  width: 100%;
+  overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .modelTodo button{
   width:80px;
